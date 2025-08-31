@@ -2,6 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.10.0/fireba
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js";
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyAgNqFqDotdh26XG6yVGYj3wZZdfV9eP1M",
   authDomain: "kwentokard.firebaseapp.com",

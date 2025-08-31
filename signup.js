@@ -1,5 +1,4 @@
-// signup.js
-import { auth } from "./firebase-config.js";
+import { auth } from "https://wehejojo.github.io/kwentokard-backend/firebase-config.js";
 import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } 
     from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
 
