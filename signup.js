@@ -1,14 +1,16 @@
-import { auth } from "../config/firebase-config";
-import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+// signup.js
+import { auth } from "./firebase-config.js";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } 
+    from "https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js";
+
+const provider = new GoogleAuthProvider();
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   const googleBtn = document.querySelector(".btn-google");
-  const provider = new GoogleAuthProvider();
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirm-password").value;
@@ -20,12 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      console.log("✅ User created:", userCredential.user);
-
       alert("User created successfully!");
-      window.location.href = "../../index.html";
+      window.location.href = "./index.html";
     } catch (error) {
-      console.error("❌ Signup error:", error.message);
       alert(error.message);
     }
   });
@@ -33,12 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
   googleBtn.addEventListener("click", async () => {
     try {
       const result = await signInWithPopup(auth, provider);
-      console.log("✅ Google user:", result.user);
-
       alert("Signed in with Google successfully!");
-      window.location.href = "../../index.html";
+      window.location.href = "./index.html";
     } catch (error) {
-      console.error("❌ Google sign-in error:", error.message);
       alert(error.message);
     }
   });
