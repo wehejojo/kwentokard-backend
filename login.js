@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       alert("Login successful!");
-      window.location.href = "./index.html";
+      window.location.href = "../../index.html";
     } catch (error) {
       alert(error.message);
     }
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const result = await signInWithPopup(auth, provider);
       alert("Logged in with Google successfully!");
-      window.location.href = "./index.html";
+      window.location.href = "../../index.html";
     } catch (error) {
       alert(error.message);
     }

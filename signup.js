@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const result = await signInWithPopup(auth, provider);
       alert("Signed in with Google successfully!");
-      window.location.href = "./index.html";
+      window.location.href = "../../index.html";
     } catch (error) {
       alert(error.message);
     }
