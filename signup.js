@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       alert("User created successfully!");
-      window.location.href = "./index.html";
+      window.location.href = "../../index.html";
     } catch (error) {
       alert(error.message);
     }
